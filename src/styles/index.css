@@ -2,5 +2,84 @@
     General Styles
 */
 body{ color: yellow;
-background-color: black;}
-.card{color: black;}
+background: url(https://images.alphacoders.com/107/107763.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+}
+
+h1{margin: auto;
+padding-top: 30px;}
+
+
+.card{color: black;
+height: 300px;
+width: 200px;
+padding: 20px;
+margin: 0px 20px 5px 20px;}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: yellow;
+    border-radius: 10px;
+  }
+
+  .spinner-border{height: 100px;
+width: 100px;
+margin: 300px  0px 300px 0px;}
+
+
+
+  .navbar{background-color: none;}
+
+  .footer{color: yellow;}
+
+.rocketButton{width: 40px;
+border-radius: 10%;
+position:absolute;bottom:10px}
+
+
+
+/* CSS */
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
