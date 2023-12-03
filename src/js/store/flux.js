@@ -3,15 +3,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			people:[],
 			planets:[],
-			starships:[]
-			
+			starships:[],
+			favorites:[]
 		},
 		actions: {
 			getPeople: async () => {
-			const store = getStore();
-			const textResponse = await fetch("https://www.swapi.tech/api/people");
-			const jsonResponse = await textResponse.json();
-			setStore({...store, people: jsonResponse.results});
+				const store = getStore();
+				const textResponse = await fetch("https://www.swapi.tech/api/people");
+				const jsonResponse = await textResponse.json();
+				setStore({...store, people: jsonResponse.results});
 			},
 			getPlanets: async () => {
 				const store = getStore();
@@ -27,7 +27,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getPeopleDetails: async () => {
 				const store = getStore();
-
 				const newPeopleDetails = await Promise.all(store.people.map(async (person) =>{
 					const textResponse = await fetch(person.url);
 					const jsonResponse = await textResponse.json();
@@ -37,7 +36,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getPlanetsDetails: async () => {
 				const store = getStore();
-
 				const newPlanetDetails = await Promise.all(store.planets.map(async (planet) =>{
 					const textResponse = await fetch(planet.url);
 					const jsonResponse = await textResponse.json();
@@ -47,7 +45,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getStarshipsDetails: async () => {
 				const store = getStore();
-
 				const newStarshipsDetails = await Promise.all(store.starships.map(async (starship) =>{
 					const textResponse = await fetch(starship.url);
 					const jsonResponse = await textResponse.json();
@@ -55,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}));
 				setStore({...store, starships: newStarshipsDetails});
 			},
-					
+			
 		},
 	};
 };
