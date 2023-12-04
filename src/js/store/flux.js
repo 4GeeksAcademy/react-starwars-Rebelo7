@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}));
 				setStore({...store, starships: newStarshipsDetails});
 			},
-			
+	
 		},
 	};
 };

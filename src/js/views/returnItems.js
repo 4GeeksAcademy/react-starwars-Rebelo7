@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const ReturnItems = ({ items, type, addToFavorites, getDetails }) => (
  <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap' , overflow: 'auto' }}>
   {items.map((item) => (

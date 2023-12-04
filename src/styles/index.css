@@ -14,13 +14,25 @@ padding-top: 30px;}
 
 h2{margin: 20px 0px 10px 0px;}
 
-select{border-radius: 5%;
+.dropdown-toggle{border-radius: 5%;
 color: yellow;
 background-color: black;}
+
+.dropdown-menu{border-radius: 5%;
+  color: yellow;
+  background-color: black;}
+
+.dropdown-item{border-radius: 5%;
+    color: yellow;}
+
+.removeButton{color: yellow;
+background: none;
+border: none;}
 
 .favorite {
   background-color: yellow; 
  }
+
 
 
 .card{color: black;
